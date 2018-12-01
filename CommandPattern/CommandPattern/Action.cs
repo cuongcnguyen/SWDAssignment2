@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class Action
+    public class Action
     {
         public void Open()
         {

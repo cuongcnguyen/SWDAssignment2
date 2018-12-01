@@ -8,6 +8,6 @@ namespace CommandPattern
 {
     public interface IOrder
     {
-        void Excecute(IOrder order);
+        void Execute();
     }
 }

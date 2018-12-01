@@ -16,9 +16,10 @@ namespace CommandPattern
             CloseDoorOrder cdo = new CloseDoorOrder(message);
             QueueingService queueingService = new QueueingService();
 
-            queueingService.placeOrder(odo); // Open Door
-            queueingService.placeOrder(cdo); // Close Door
-            
+            queueingService.PlaceOrder(odo); // Open Door
+            queueingService.PlaceOrder(cdo); // Close Door
+
+            Console.ReadLine();
         }
     }
 }

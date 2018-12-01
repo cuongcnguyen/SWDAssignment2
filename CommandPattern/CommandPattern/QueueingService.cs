@@ -9,15 +9,13 @@ namespace CommandPattern
 {
     class QueueingService
     {
-        private ArrayList ordersQueue = new ArrayList();
+        private readonly ArrayList _ordersQueue = new ArrayList();
 
-        public void placeOrder(IOrder order)
+        public void PlaceOrder(IOrder order)
         {
-            ordersQueue.Add(order);            
-            order.Excecute(ordersQueue[0]);
-            order.Excecute(ordersQueue.Remove(0));
-
-
+            _ordersQueue.Add(order);
+            order.Execute();
+            _ordersQueue.Remove(_ordersQueue[0]);
         }
     }
 }

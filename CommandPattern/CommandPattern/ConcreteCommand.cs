@@ -6,45 +6,33 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class ConcreteCommand
+    public class ConcreteCommand
     {
         public class OpenDoorOrder : IOrder
         {
-            private Action message;
+            private readonly Action _message;
             public OpenDoorOrder(Action me)
             {
-                message = me;
+                _message = me;
             }
-
-            //public void Excecute(IOrder order)
-            //{
-            //    throw new NotImplementedException();
-            //}
 
             public void Execute()
             {
-                message.Open();
-                
+                _message.Open();
             }
         }
 
         public class CloseDoorOrder : IOrder
         {
-            private Action message;
+            private readonly Action _message;
             public CloseDoorOrder(Action me)
             {
-                message = me;
-            }
-
-            public void Excecute(IOrder order)
-            {
-                throw new NotImplementedException();
+                _message = me;
             }
 
             public void Execute()
             {
-                message.Close();
-                
+                _message.Close();
             }
         }
     }
