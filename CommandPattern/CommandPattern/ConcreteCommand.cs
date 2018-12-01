@@ -15,10 +15,16 @@ namespace CommandPattern
             {
                 message = me;
             }
+
+            //public void Excecute(IOrder order)
+            //{
+            //    throw new NotImplementedException();
+            //}
+
             public void Execute()
             {
                 message.Open();
-                throw new NotImplementedException();
+                
             }
         }
 
@@ -29,10 +35,16 @@ namespace CommandPattern
             {
                 message = me;
             }
+
+            public void Excecute(IOrder order)
+            {
+                throw new NotImplementedException();
+            }
+
             public void Execute()
             {
                 message.Close();
-                throw new NotImplementedException();
+                
             }
         }
     }
