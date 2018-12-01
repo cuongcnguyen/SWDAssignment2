@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Action.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ConcreteCommand.cs" />
+    <Compile Include="IOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueingService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
