@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandPatterns
+namespace CommandPattern
 {
-    class Program
+    class QueueingService
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
