@@ -14,12 +14,27 @@ namespace CommandPattern
             Action message = new Action();
             OpenDoorOrder odo = new OpenDoorOrder(message);
             CloseDoorOrder cdo = new CloseDoorOrder(message);
-            QueueingService queueingService = new QueueingService();
-
+            QueueingService queueingService = new QueueingService();            
             queueingService.PlaceOrder(odo); // Open Door
-            queueingService.PlaceOrder(cdo); // Close Door
-
+            queueingService.PlaceOrder(cdo); // Close Door            
+            Console.WriteLine("");
+            Console.WriteLine("Press a button (1 to open the door, 2 to close it): ");
+            int buttonChose = int.Parse(Console.ReadLine());            
+            switch (buttonChose)
+            {
+                case 1:
+                    {
+                        queueingService.PlaceOrder(odo);                        
+                        break;
+                    }
+                case 2:
+                    {
+                        queueingService.PlaceOrder(cdo);
+                        break;
+                    }
+            }            
             Console.ReadLine();
+            
         }
     }
 }
